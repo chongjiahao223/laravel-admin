@@ -23,7 +23,7 @@ class CreateRolesHasPermissionsTable extends Migration
                   KEY `role_has_permissions_role_id_foreign` (`role_id`) USING BTREE,
                   CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
                   CONSTRAINT `role_has_permissions_role_id` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
-                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT COMMENT='角色-权限中间表';
+                ) ENGINE=InnoDB COMMENT='角色-权限中间表';
             ");
         }
     }
